@@ -1,0 +1,26 @@
+pluginManagement {
+    repositories {
+        google()
+        mavenCentral()
+        gradlePluginPortal()
+    }
+}
+dependencyResolutionManagement {
+    repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
+    repositories {
+        google()
+        mavenCentral()
+    }
+}
+rootProject.name = "LetianpaiMcuService"
+include ':app'
+include ':CommandLib'
+include ':library'
+project(':library').projectDir = new File('GeeUIBase/library')
+project(':CommandLib').projectDir = new File('GeeUIBase/CommandLib')
+include ':CommChannel'
+project(':CommChannel').projectDir = new File('GeeUIComponents/CommChannel')
+include ':Components'
+project(':Components').projectDir = new File('GeeUIComponents/Components')
+
+
